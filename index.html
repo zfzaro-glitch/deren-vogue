@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deren Vogue | دێرین ڤۆگ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -23,7 +24,8 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* بەکارهێنانی فۆنتە نوێیەکە بۆ هەموو پەیجەکە */
+            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--primary-bg);
             color: white;
             display: flex;
@@ -32,7 +34,6 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px 0;
-            /* باکگراوندی ڕەشی شاز */
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
         }
 
@@ -71,14 +72,14 @@
             letter-spacing: 2px;
             color: var(--main-color);
             text-transform: uppercase;
-            font-weight: 800;
+            font-weight: 900;
         }
 
         .tagline {
-            font-size: 14px;
+            font-size: 15px;
             color: #aaaaaa;
             margin-bottom: 30px;
-            font-weight: 300;
+            font-weight: 700;
         }
 
         .btn-list {
@@ -94,7 +95,6 @@
             border-radius: 20px;
             text-decoration: none;
             color: white;
-            font-weight: 700;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(255,255,255,0.05);
             cursor: pointer;
@@ -113,7 +113,7 @@
         .phone-call { background-color: var(--phone-blue); color: #fff;}
         .facebook { background-color: var(--facebook-blue); color: #fff;}
         .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff;}
-        .snapchat { background-color: var(--snapchat-yellow); color: #000 !important; font-weight: 800;}
+        .snapchat { background-color: var(--snapchat-yellow); color: #000 !important;}
         .tiktok { background-color: var(--tiktok-black); border: 1px solid #333;}
         .gps { background-color: var(--gps-red); color: #fff;}
         
@@ -123,9 +123,16 @@
         .snapchat span, .snapchat i { color: #000 !important; }
 
         .btn i { font-size: 22px; width: 30px; text-align: center; }
-        .btn span { flex-grow: 1; text-align: center; font-size: 16px; margin-right: -30px; }
+        
+        /* لێرەدا دەقەکەمان کردووە بە بۆڵد و قەبارەکەیمان ڕێکخستووە */
+        .btn span { 
+            flex-grow: 1; 
+            text-align: center; 
+            font-size: 16px; 
+            margin-right: -30px; 
+            font-weight: 900; /* فۆنتەکە زۆر ئەستوور دەکات */
+        }
 
-        /* ستایلی ئۆپشنەکانی خوارەوە (لیستی کراوە) */
         .dropdown-options {
             display: none;
             flex-direction: column;
@@ -145,7 +152,7 @@
             font-size: 12px;
             color: #666;
             letter-spacing: 1.5px;
-            font-weight: 600;
+            font-weight: 700;
         }
         .footer span {
             color: #fff;

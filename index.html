@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deren Vogue | دێرین ڤۆگ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -24,8 +24,8 @@
         }
 
         body {
-            /* بەکارهێنانی فۆنتە نوێیەکە بۆ هەموو پەیجەکە */
-            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+            /* جێبەجێکردنی فۆنتە نوێیەکە */
+            font-family: 'Noto Sans Arabic', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--primary-bg);
             color: white;
             display: flex;
@@ -69,6 +69,7 @@
         h1 {
             font-size: 26px;
             margin: 10px 0 5px;
+            /* بۆ ئینگلیزی ئاساییە، بەڵام بۆ کوردی نابێت letter-spacing هەبێت */
             letter-spacing: 2px;
             color: var(--main-color);
             text-transform: uppercase;
@@ -80,6 +81,7 @@
             color: #aaaaaa;
             margin-bottom: 30px;
             font-weight: 700;
+            letter-spacing: 0 !important; /* دڵنیابوونەوە لە نەبوونی بۆشایی بۆ لکانی پیتەکان */
         }
 
         .btn-list {
@@ -124,13 +126,13 @@
 
         .btn i { font-size: 22px; width: 30px; text-align: center; }
         
-        /* لێرەدا دەقەکەمان کردووە بە بۆڵد و قەبارەکەیمان ڕێکخستووە */
         .btn span { 
             flex-grow: 1; 
             text-align: center; 
             font-size: 16px; 
             margin-right: -30px; 
-            font-weight: 900; /* فۆنتەکە زۆر ئەستوور دەکات */
+            font-weight: 900; 
+            letter-spacing: 0 !important; /* زۆر گرنگە بۆ ئەوەی پیتە کوردییەکان بەیەکەوە بلکێن */
         }
 
         .dropdown-options {
@@ -173,56 +175,56 @@
             
             <a href="https://www.instagram.com/deren_vogue?igsh=MTluNHo2Mndnd2c1aQ==" class="btn instagram" target="_blank" rel="noopener">
                 <i class="fab fa-instagram"></i>
-                <span>ئینستاگرام | INSTAGRAM</span>
+                <span><bdi>ئینستاگرام</bdi> | <bdi>INSTAGRAM</bdi></span>
             </a>
 
             <a href="https://www.tiktok.com/@derenvogue" class="btn tiktok" target="_blank" rel="noopener">
                 <i class="fab fa-tiktok"></i>
-                <span>تیکتۆک | TIK TOK</span>
+                <span><bdi>تیکتۆک</bdi> | <bdi>TIK TOK</bdi></span>
             </a>
 
             <a href="https://snapchat.com/t/dcLs2a9G" class="btn snapchat" target="_blank" rel="noopener">
                 <i class="fab fa-snapchat-ghost"></i>
-                <span>سناپچات | SNAPCHAT</span>
+                <span><bdi>سناپچات</bdi> | <bdi>SNAPCHAT</bdi></span>
             </a>
 
             <a href="https://www.facebook.com/profile.php?id=61577769291618&mibextid=ZbWKwL" class="btn facebook" target="_blank" rel="noopener">
                 <i class="fab fa-facebook-f"></i>
-                <span>فەیسبووک | FACEBOOK</span>
+                <span><bdi>فەیسبووک</bdi> | <bdi>FACEBOOK</bdi></span>
             </a>
 
             <a href="https://maps.app.goo.gl/h8dU8AVjwZ3WtpCu7" class="btn gps" target="_blank" rel="noopener">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>ناونیشان | GPS</span>
+                <span><bdi>ناونیشان</bdi> | <bdi>GPS</bdi></span>
             </a>
 
             <button class="btn whatsapp" onclick="toggleDropdown('whatsapp-options')">
                 <i class="fab fa-whatsapp"></i>
-                <span>واتسئاپ | WHATSAPP</span>
+                <span><bdi>واتسئاپ</bdi> | <bdi>WHATSAPP</bdi></span>
             </button>
             <div id="whatsapp-options" class="dropdown-options">
                 <a href="https://wa.me/9647511563676" class="btn korek-btn" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                    <span>کۆڕەک (07511563676)</span>
+                    <span><bdi>کۆڕەک</bdi> (07511563676)</span>
                 </a>
                 <a href="https://wa.me/9647706885838" class="btn asia-btn" target="_blank">
                     <i class="fab fa-whatsapp"></i>
-                    <span>ئاسیا (07706885838)</span>
+                    <span><bdi>ئاسیا</bdi> (07706885838)</span>
                 </a>
             </div>
 
             <button class="btn phone-call" onclick="toggleDropdown('phone-options')">
                 <i class="fas fa-phone-alt"></i>
-                <span>پەیوەندیکردن | PHONE CALL</span>
+                <span><bdi>پەیوەندیکردن</bdi> | <bdi>PHONE CALL</bdi></span>
             </button>
             <div id="phone-options" class="dropdown-options">
                 <a href="tel:+9647511563676" class="btn korek-btn">
                     <i class="fas fa-mobile-alt"></i>
-                    <span>کۆڕەک (07511563676)</span>
+                    <span><bdi>کۆڕەک</bdi> (07511563676)</span>
                 </a>
                 <a href="tel:+9647706885838" class="btn asia-btn">
                     <i class="fas fa-mobile-alt"></i>
-                    <span>ئاسیا (07706885838)</span>
+                    <span><bdi>ئاسیا</bdi> (07706885838)</span>
                 </a>
             </div>
 

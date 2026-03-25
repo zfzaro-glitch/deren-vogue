@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deren Vogue | دێرین ڤۆگ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: #000000;
+            --main-color: #ffffff;
+            --whatsapp-green: #25D366;
+            --insta-pink: #E1306C;
+            --facebook-blue: #1877F2;
+            --snapchat-yellow: #FFFC00;
+            --tiktok-black: #111111;
+            --gps-red: #ea4335;
+            --phone-blue: #34b7f1;
+            --asia-red: #d11241;
+            --korek-orange: #f7941d;
+            --glass-bg: rgba(25, 25, 25, 0.6);
+            --shadow-color: rgba(255, 255, 255, 0.1); 
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px 0;
+            /* باکگراوندی ڕەشی شاز */
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+
+        .card {
+            width: 90%;
+            max-width: 400px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 40px;
+            padding: 40px 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 20px var(--shadow-color);
+        }
+
+        .logo-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            padding: 5px;
+            box-shadow: 0 0 20px var(--shadow-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 10px 0 5px;
+            letter-spacing: 2px;
+            color: var(--main-color);
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            padding: 16px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            filter: brightness(1.1);
+        }
+
+        .whatsapp { background-color: var(--whatsapp-green); color: #fff;}
+        .phone-call { background-color: var(--phone-blue); color: #fff;}
+        .facebook { background-color: var(--facebook-blue); color: #fff;}
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff;}
+        .snapchat { background-color: var(--snapchat-yellow); color: #000 !important; font-weight: 800;}
+        .tiktok { background-color: var(--tiktok-black); border: 1px solid #333;}
+        .gps { background-color: var(--gps-red); color: #fff;}
+        
+        .asia-btn { background-color: var(--asia-red); font-size: 14px; padding: 12px 20px;}
+        .korek-btn { background-color: var(--korek-orange); font-size: 14px; padding: 12px 20px;}
+
+        .snapchat span, .snapchat i { color: #000 !important; }
+
+        .btn i { font-size: 22px; width: 30px; text-align: center; }
+        .btn span { flex-grow: 1; text-align: center; font-size: 16px; margin-right: -30px; }
+
+        /* ستایلی ئۆپشنەکانی خوارەوە (لیستی کراوە) */
+        .dropdown-options {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+            padding: 0 10px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+        .footer span {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Deren Vogue Logo" class="logo-img">
+        </div>
+
+        <h1>DEREN VOGUE</h1>
+        <p class="tagline">بەخێربێن بۆ پەیجەکەمان</p>
+
+        <div class="btn-list">
+            
+            <a href="https://www.instagram.com/deren_vogue?igsh=MTluNHo2Mndnd2c1aQ==" class="btn instagram" target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i>
+                <span>ئینستاگرام | INSTAGRAM</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@derenvogue" class="btn tiktok" target="_blank" rel="noopener">
+                <i class="fab fa-tiktok"></i>
+                <span>تیکتۆک | TIK TOK</span>
+            </a>
+
+            <a href="https://snapchat.com/t/dcLs2a9G" class="btn snapchat" target="_blank" rel="noopener">
+                <i class="fab fa-snapchat-ghost"></i>
+                <span>سناپچات | SNAPCHAT</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61577769291618&mibextid=ZbWKwL" class="btn facebook" target="_blank" rel="noopener">
+                <i class="fab fa-facebook-f"></i>
+                <span>فەیسبووک | FACEBOOK</span>
+            </a>
+
+            <a href="https://maps.app.goo.gl/h8dU8AVjwZ3WtpCu7" class="btn gps" target="_blank" rel="noopener">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>ناونیشان | GPS</span>
+            </a>
+
+            <button class="btn whatsapp" onclick="toggleDropdown('whatsapp-options')">
+                <i class="fab fa-whatsapp"></i>
+                <span>واتسئاپ | WHATSAPP</span>
+            </button>
+            <div id="whatsapp-options" class="dropdown-options">
+                <a href="https://wa.me/9647511563676" class="btn korek-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>کۆڕەک (07511563676)</span>
+                </a>
+                <a href="https://wa.me/9647706885838" class="btn asia-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>ئاسیا (07706885838)</span>
+                </a>
+            </div>
+
+            <button class="btn phone-call" onclick="toggleDropdown('phone-options')">
+                <i class="fas fa-phone-alt"></i>
+                <span>پەیوەندیکردن | PHONE CALL</span>
+            </button>
+            <div id="phone-options" class="dropdown-options">
+                <a href="tel:+9647511563676" class="btn korek-btn">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>کۆڕەک (07511563676)</span>
+                </a>
+                <a href="tel:+9647706885838" class="btn asia-btn">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>ئاسیا (07706885838)</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            POWERED BY <span>SUNFLOWER WEB</span> | 2026
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            var options = document.getElementById(id);
+            if (options.style.display === "flex") {
+                options.style.display = "none";
+            } else {
+                options.style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>
